@@ -45,24 +45,6 @@ __all__ = [
     "RETURN_VALUE",
 ]
 
-
-import warnings
-
-
-def show_deprecation_warning():
-    message = (
-        "The 'django-fsm' package has been integrated into 'viewflow' as 'viewflow.fsm' starting from version 3.0. "
-        "This version of 'django-fsm' is no longer maintained and will not receive further updates. "
-        "If you require new functionality introduced in 'django-fsm' version 3.0 or later, "
-        "please migrate to 'viewflow.fsm'. For detailed instructions on the migration process and accessing new features, "
-        "refer to the official documentation at https://docs.viewflow.io/fsm/index.html"
-    )
-    warnings.warn(message, UserWarning, stacklevel=2)
-
-
-show_deprecation_warning()
-
-
 if sys.version_info[:2] == (2, 6):
     # Backport of Python 2.7 inspect.getmembers,
     # since Python 2.6 ships buggy implementation
